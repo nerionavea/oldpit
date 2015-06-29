@@ -1,0 +1,10 @@
+%h1 Clientes
+- @customer.each do |customer|
+	%ul
+		%h2
+			%a{:href => "/customer/#{customer.id}"}
+				#{customer.nombre}
+		%a{:href => "/customer/#{customer.id}/edit"}
+			Editar
+		%p
+			%strong #{customer.email}, #{customer.telefono}

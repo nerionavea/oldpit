@@ -1,0 +1,10 @@
+%h1 Registro
+- @Services.reverse.each do |service|
+	%ul
+		%h2
+			%a{:href => "/service/#{service.id}"}
+				#{service.vehiculo}
+		%p
+			%strong #{service.fecha}, #{service.oil}, #{service.customer.nombre}
+				
+				

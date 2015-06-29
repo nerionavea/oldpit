@@ -1,0 +1,51 @@
+%h1.section-title Datos del cliente
+%h3 
+	#{@customer.nombre}
+%table.element-details.table
+	%tr
+		%td.detail
+			%h5.detail-title
+				%strong Número de Cédula
+			#{@customer.placa}
+		%td.detail
+			%h5.detail-title
+				%strong Número de teléfono
+			#{@customer.telefono}
+		%td.detail
+			%h5.detail-title
+				%strong Correo electrónico
+			#{@customer.email}
+.clearfix{}
+	%h3.section-title Servicios del cliente
+	%table.service-details.table
+		%tr
+			%td
+				%h5.detail-title
+					%strong Fecha
+			%td
+				%h5.detail-title
+					%strong Tipo de Aceite
+			%td
+				%h5.detail-title
+					%strong Kilometraje Anterior
+			%td
+				%h5.detail-title
+					%strong Kilometraje Próximo
+			%td
+				%h5.detail-title
+					%strong Vehiculo
+		- @customer.services.reverse.each do |service|
+			%tr
+				%td
+					#{service.fecha}
+				%td
+					#{service.oil}
+				%td
+					#{service.kilact}
+				%td
+					#{service.kilsig}
+				%td
+					#{service.vehiculo}
+
+
+

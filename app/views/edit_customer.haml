@@ -1,0 +1,7 @@
+%h1 Editar Cliente
+%form{:method => 'POST', :action => "/customer/#{@customer.id}/edit"}
+	%input{:type => 'hidden', :name => '_method', :value => 'PUT' }
+	= haml :form_customer
+	%input{:type => 'submit', :value => "Guardar"}
+%form{:method => 'POST', :action => "/delete_customer"}
+

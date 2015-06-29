@@ -1,0 +1,18 @@
+%h1.detail-title Crear un servicio
+%form{:method => 'POST', :action => '/service'}
+	= haml :form_customer
+	.form-group
+		%label Tipo de Aceite
+		%input.form-control{:name => 'service[oil]', :id => 'oil', :required => true}
+	.form-group
+		%label Kilometraje Actual
+		%input.form-control{:name => 'service[kilact]', :id => "kilact", :required => true,:maxlength => '6'}
+	.form-group
+		%script{:type => "text/javascript"}
+			$(document).ready(function (){$("#kilact").change(function (e){var kila = $("#kilact").val();var resultado = parseFloat(kila)+5000;$("#kilsig").val(resultado);})})
+		%label Próximo Cambio
+		%input.form-control{:name => 'service[kilsig]',:id => "kilsig", :required => true, :maxlength => '6'}
+	.form-group
+		%label Vehículo
+		%input.form-control{:name => 'service[vehiculo]', :required => true}
+	%input{:type => 'submit', :value => "Guardar"}

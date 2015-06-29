@@ -1,0 +1,5 @@
+%h1.detail-title Crear un servicio
+%form{:method => 'POST', :action => '/create_service'}
+	.form-group
+		%label Número de Cédula
+		%input.form-control{:name => 'placa', :id => 'placa', :required => true}

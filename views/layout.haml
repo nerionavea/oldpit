@@ -1,0 +1,47 @@
+!!!
+%html
+	%head
+		%title Pits
+		%link{:rel => 'stylesheet', :type => 'text/css', :href => '/css/bootstrap.css'}
+		%link{:href => 'https://fonts.googleapis.com/css?family=Open+Sans',  :rel => 'stylesheet', :type => 'text/css'}
+		%script{:src => "/javascript/jquery-2.1.0.js"}
+		%script{:src => "/javascript/bootstrap.min.js"}
+		%script{:src => "/javascript/jquery-ui.min.js"}
+		%script{:src => "/javascript/animations.js"}
+		%meta{:name => "viewport", :content => "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"}
+		%link{:rel='shortcut '}
+	%body
+	.container-fluid
+		.row
+			.col-md-2.col-md-offset-10
+				%form.form-inline{:method => 'POST', :action => '/find'}
+					.form-group
+						.label 
+							%span{:class => "glyphicon glyphicon-search"}
+						%input.form-control{:type => "text", :name => 'placa', :placeholder => "Número de cedula"}
+		.row
+			.col-md-1.text-center.fixed
+				#logo.center-block
+					%a{:href => '/index',}
+						%img{:src => '/logo.png', :width => '74', :height => '83'}
+				%ul.list-unstyled
+					%li.menubuttom{:style => 'margin-top:45px;'}
+						%a{:href => '/service', :style => "text-decoration:none; color:black;"}
+							%img{:src => '/icons/service.png'}
+							%p Servicio
+					%li.menubuttom{:style => 'margin-top:45px;'}
+						%a{:href => '/customer', :style => "text-decoration:none; color:black;"}
+							%img{:src => '/icons/people.png'}
+							%p Clientes
+					%li.menubuttom{:style => 'margin-top:45px;'}
+						%a{:href => '/listservice', :style => "text-decoration:none; color:black;"}
+							%img{:src => '/icons/catalog.png'}
+							%p Registro
+					%li.menubuttom{:style => 'margin-top:45px;' }
+						%img{:src => '/icons/help.png'}
+						%p Ayuda
+			.col-md-10.col-md-offset-2= yield
+		.row
+			%footer.col-md-12.text-center
+				%p
+					NAVEA (C) 2014

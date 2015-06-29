@@ -1,0 +1,8 @@
+%h1 Clientes
+- @customer.each do |customer|
+	%ul
+		%h2
+			%a.detail-title{:href => "/customer/#{customer.id}", :style => "text-decoration:none;"}
+				#{customer.nombre}
+		%p
+			%strong #{customer.email}, #{customer.telefono}

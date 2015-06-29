@@ -1,0 +1,31 @@
+%h1 Detalles del Servicio
+.detail
+	%h5.detail-title Fecha	
+	%strong #{@servic.fecha}
+	%h5.detail-title Tipo de aceite
+	%strong #{@servic.oil}
+	%h5.detail-title
+		Kilometraje anterior
+	%strong #{@servic.kilact}
+	%h5.detail-title
+		Kilometraje Siguente
+	%strong #{@servic.kilsig}
+	%h5.detail-title
+		Vehiculo
+	%strong #{@servic.vehiculo}
+	%h5.detail-title
+		Nombre del cliente
+	%strong #{@servic.customer.nombre}
+	%h5.detail-title
+		Número de cédula
+	%strong #{@servic.customer.placa}
+	%h5.detail-title
+		Teléfono
+	%strong #{@servic.customer.telefono}
+	%h5.detail-title
+		Correo electrónico
+	%strong #{@servic.customer.email}
+%a{:href => "/listservice/#{@servic.id}/ticket"} Imprimir Ticket
+	
+	
+

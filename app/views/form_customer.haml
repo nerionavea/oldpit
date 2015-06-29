@@ -1,0 +1,12 @@
+.form-group
+	%label Número de Cédula
+	%input.form-control{:name => 'customer[placa]', :id => 'placa', :value => "#{@customer.placa}", :required => true, :maxlength => '8'}
+.form-group
+	%label Nombre del Cliente
+	%input.form-control{:name => 'customer[nombre]', :id => 'nombre',:value => "#{@customer.nombre}", :required => true}
+.form-group
+	%label Numero Telefónico
+	%input.form-control{:name => 'customer[telefono]', :id => 'telefono', :value => "#{@customer.telefono}", :required => true, :maxlength => '11'}
+.form-group
+	%label Email
+	%input.form-control{:name => 'customer[email]',:type => "email", :id => 'email', :value => "#{@customer.email}"}

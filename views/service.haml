@@ -1,0 +1,30 @@
+%h1.detail-title Crear un servicio
+%form{:method => 'POST', :action => '/service'}
+	.form-group
+		%label Número de Cédula
+		%input.form-control{:name => 'placa', :id => 'placa', :value => "#{@customer.placa}", :required => true}
+	.form-group
+		%label Nombre del Cliente
+		%input.form-control{:name => 'nombre', :id => 'nombre',:value => "#{@customer.nombre}", :required => true}
+	.form-group
+		%label Numero Telefónico
+		%input.form-control{:name => 'telefono', :id => 'telefono', :value => "#{@customer.telefono}", :required => true}
+	.form-group
+		%label Email
+		%input.form-control{:name => 'email',:type => "email", :id => 'email', :value => "#{@customer.email}", :required => true}
+	.form-group
+		%label Tipo de Aceite
+		%input.form-control{:name => 'oil', :id => 'oil', :required => true}
+	.form-group
+		%label Kilometraje Actual
+		%input.form-control{:name => 'kilact', :id => "kilact", :required => true}
+	.form-group
+		%script{:type => "text/javascript"}
+			$(document).ready(function (){$("#kilact").change(function (e){var kila = $("#kilact").val();var resultado = parseFloat(kila)+5000;$("#kilsig").val(resultado);})})
+		%label Próximo Cambio
+		%input.form-control{:name => 'kilsig',:id => "kilsig", :required => true}
+	.form-group
+		%label Vehículo
+		%input.form-control{:name => 'vehiculo', :required => true}
+	%input{:type => 'submit', :value => "Guardar"}
+%script{:src => '/javascript/searchcustomer.js'}

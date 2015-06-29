@@ -1,0 +1,36 @@
+%h1 Detalles del Servicio
+%h5 Fecha	
+%strong #{@servic.fecha}
+%h5
+	Proximo Cambio
+%strong #{@servic.next_change}
+%h5 Tipo de aceite
+%strong #{@servic.oil}
+%h5
+	Kilometraje anterior
+%strong #{@servic.kilact}
+%h5
+	Kilometraje Siguente
+%strong #{@servic.kilsig}
+%h5
+	Vehiculo
+%strong #{@servic.vehiculo}
+%h5
+	¿Fue recordado?
+%strong #{@servic.remembered}
+%h5
+	Nombre del cliente
+%strong #{@servic.customer.nombre}
+%h5
+	Número de cédula
+%strong #{@servic.customer.placa}
+%h5
+	Teléfono
+%strong #{@servic.customer.telefono}
+%h5
+	Correo electrónico
+%strong #{@servic.customer.email}
+%a{:href => "/service/#{@servic.id}/ticket"} Imprimir Ticket
+	
+	
+

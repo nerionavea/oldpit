@@ -1,0 +1,10 @@
+%script{:src => "/javascript/jquery.PrintArea.js"}
+#printArea
+	%p
+		Fecha: #{@servic.fecha}
+	%p
+		Kilometraje Actual: #{@servic.kilact} Kms
+	%p
+		Próximo cambio: #{@servic.kilsig} Kms
+%a{:href => "javascript:void(0)", :id => "print"} Imprimir
+%script{:type => "text/javascript"} $('#print').click(function (){$('div#printArea').printArea();})
